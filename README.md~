@@ -28,5 +28,4 @@ latexmk bthesis
 
 ## :tada: 謝辞
 コンパイル部分やこのREADMEは前田先輩の[修士論文テンプレート](https://github.com/koikelab-team/mthesis)からお借りしました:pray::bow:
-
 論文のテンプレートは2019年度に情報工学系より配布されているものに準じています．
