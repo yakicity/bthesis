@@ -1,0 +1,25 @@
+name: compile tex
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: paperist/alpine-texlive-ja:latest
+      volumes: 
+        - .:/workdir
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: compile 
+        run: |
+          platex main
+          pbibtex main
+          platex main
+          dvipdfmx main
+      - uses: actions/upload-artifact@master
+        with:
+          name: main.pdf
+          path: main.pdf

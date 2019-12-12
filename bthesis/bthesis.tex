@@ -1,0 +1,59 @@
+\documentclass[a4paper,11pt,oneside,openany,report]{jsbook}
+
+\usepackage[left=30mm,right=30mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{cscover}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage[nobreak]{cite}
+\usepackage[a4paper,dvipdfmx,pdfdisplaydoctitle=true,%
+    bookmarks=true,bookmarksnumbered=true,bookmarkstype=toc,bookmarksopen=true,%
+    pdftitle={学位論文の体裁に関する研究},%
+    pdfauthor={東工大太郎}%
+    ]{hyperref}
+\usepackage{pxjahyper}
+
+\renewcommand{\bibname}{参考文献}
+\setcounter{tocdepth}{2}
+\pagestyle{plain}
+
+\newcommand{\TODO}[1]{\textbf{[TODO: #1]}}
+%\renewcommand{\TODO}[1]{}
+
+\thesistype{学士特定課題研究論文}
+\title{学位論文の\\体裁に関する研究}
+\author{東工大 太郎}
+\studentid{16B00000}
+\affiliation{東京工業大学\\情報理工学院\\情報工学系}
+\date{2020年1月}
+
+\supervisorname{指導教員}
+\supervisor{小池 英樹}
+%\dsupervisorname{副指導教員}
+%\dsupervisor{工学 次郎}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+
+\input{sections/1_abstract/abstract.tex}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mainmatter
+\input{sections/2_introduction/introduction.tex}
+\input{sections/3_relatedwork/relatedwork.tex}
+\input{sections/4_body-1/body-1.tex}
+\input{sections/4_body-2/body-2.tex}
+\input{sections/4_body-3/body-3.tex}
+\input{sections/5_conclusion/conclusion.tex}
+\input{sections/6_appendix/appendix.tex}
+
+\backmatter
+\input{sections/7_acknowledgment/acknowledgment.tex}
+\input{sections/8_reference/reference.tex}
+
+\end{document}
