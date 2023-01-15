@@ -10,7 +10,7 @@ docker-build:
 	docker build -t $(IMAGE_NAME) .
 
 docker-run:
-	docker run --rm -it -v $PWD:/workdir -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) --name $(CONTAINER_NAME) $(IMAGE_NAME)
+	docker run --rm -it -v $(PWD):/workdir -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) $(IMAGE_NAME)
 
 clean:
 	latexmk -C
