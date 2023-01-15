@@ -13,6 +13,29 @@
 ```bash
 latexmk bthesis
 ```
+もしくは
+```
+make run
+```
+
+余計なファイルの削除は
+```
+make clean
+```
+
+### Docker
+Dockerを使ったコンパイル
+最初に1回(2GB近いイメージをビルドするのでかなり遅い)(僕の環境では10分掛かりました)
+```
+make docker-build
+```
+以後起動毎に
+```
+make docker-run
+```
+
+このdockerを実行するとファイルの更新に応じて自動で再コンパイルします
+あと。や、が自動的に．と，に変換されます
 
 ### by using GitHub Actions
 リポジトリをpushすると、勝手にビルドされるよ。
@@ -29,4 +52,6 @@ latexmk bthesis
 ## :tada: 謝辞
 コンパイル部分やこのREADMEは前田先輩の[修士論文テンプレート](https://github.com/koikelab-team/mthesis)からお借りしました:pray::bow:
 
-論文のテンプレートは2019年度に情報工学系より配布されているものに準じています．
+Docker関連のファイルは[ArkさんのDockerイメージ](https://github.com/arkark/latexmk-docker)を改変したものです
+
+論文のテンプレートは2022年度に情報工学系より配布されているものに準じています．

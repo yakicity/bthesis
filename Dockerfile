@@ -6,7 +6,7 @@ FROM ubuntu
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV DEBCONF_NOWARNINGS=yes
-ENV YEAR "2021"
+ENV YEAR "2022"
 ENV PATH="/usr/local/texlive/${YEAR}/bin/x86_64-linux:$PATH"
 
 
